@@ -1,3 +1,5 @@
-isort
-flake8
-pylint
+isort==4.2.15
+flake8==3.4.1
+pylint==1.7.3
+flask===0.12.2
+docker==2.5.1
