@@ -1,6 +1,6 @@
 """File for all info classes"""
 from .base import BaseDockerInfo
-from .utils import get_all_fields_by
+from .utils import get_all_fields_by, get_field_by
 
 
 class DockerInfo(BaseDockerInfo):
@@ -12,11 +12,12 @@ class DockerInfo(BaseDockerInfo):
         ..:: all_images
             Return an array with image names
     """
-    def all_containers(self):
+    def all_container_names(self):
         """Return all container names"""
-        fields = get_all_fields_by('Names', self._get_all_containers())
-        return fields
+        names = get_all_fields_by('Names', self._get_all_containers())
+        return names
 
-    def all_images(self):
+    def all_image_names(self):
         """Return all images names"""
-        pass
+        images = get_field_by('Image', self._get_all_containers())
+        return images
