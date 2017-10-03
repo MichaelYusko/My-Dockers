@@ -1,1 +1,1 @@
-from interface.app import app
+from interface.app import app  # NOQA
