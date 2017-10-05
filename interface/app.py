@@ -10,5 +10,6 @@ app = Flask(__name__)  # pylint: disable=invalid-name
 @app.route('/')
 def index():
     """Index route"""
-    dockers = DockerInfo().all_container_names()
-    return render_template('index.html', dockers=dockers)
+    containers = DockerInfo().all_container_names()
+    images = DockerInfo().all_image_names()
+    return render_template('index.html', dockers=containers, images=images)
