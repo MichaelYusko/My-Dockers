@@ -5,10 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    <p>My dockers</p>
+    <p>My docker containers</p>
     <ul>
         {% for docker in dockers %}
         <li> {{ docker }}</li>
+        {% endfor %}
+    </ul>
+     <p>My docker images</p>
+    <ul>
+        {% for image in images %}
+        <li> {{ image }}</li>
         {% endfor %}
     </ul>
 </body>
