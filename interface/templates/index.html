@@ -7,14 +7,19 @@
 <body>
     <p>My docker containers</p>
     <ul>
-        {% for docker in dockers %}
+        {% for docker in container_names %}
         <li> {{ docker }}</li>
         {% endfor %}
     </ul>
      <p>My docker images</p>
     <ul>
-        {% for image in images %}
+        {% for image in image_names %}
         <li> {{ image }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for container in containers %}
+        <li>{{ container }}</li>
         {% endfor %}
     </ul>
 </body>
